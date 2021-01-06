@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans.xsd        http://code.alibabatech.com/schema/dubbo        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="dubbo-server"/>
+    <!--&lt;!&ndash;不需要注册到服务注册中心&ndash;&gt;
+    <dubbo:registry address="N/A"/>
+    &lt;!&ndash;服务的引用;其中url配置是在服务端启动后得到的&ndash;&gt;
+    <dubbo:reference id="loginService"
+                     interface="com.ghy.server.ILoginService"
+    url="dubbo://192.168.56.1:20880/com.ghy.server.ILoginService"/>-->
+
+
+    <dubbo:registry address="zookeeper://192.168.2.101:2181" timeout="10000"/>
+    <!--服务的引用;其中url配置是在服务端启动后得到的-->
+    <dubbo:reference id="loginService"
+                     interface="com.ghy.server.ILoginService"
+                    />
+
+</beans>
