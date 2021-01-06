@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: cloud-dubbo-user
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.2.102:8848
+
+server:
+  port: 8081

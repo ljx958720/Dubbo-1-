@@ -1,0 +1,7 @@
+spring.application.name=cloud-dubbo-server
+
+dubbo.scan.base-packages=com.ghy.clouddubboserver.service
+
+dubbo.protocol.port=30882
+dubbo.protocol.name=dubbo
+spring.cloud.nacos.discovery.server-addr= 192.168.1.34:8848

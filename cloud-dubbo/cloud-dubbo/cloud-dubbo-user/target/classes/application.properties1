@@ -1,0 +1,3 @@
+spring.application.name=cloud-dubbo-user
+spring.cloud.nacos.discovery.server-addr=192.168.1.34:8848
+
